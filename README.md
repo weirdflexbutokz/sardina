@@ -6,7 +6,7 @@ Sardina es un programa simple para flashear imágenes en dispositivos de almacen
 ![](./resources/capture-gui.png)
 
 ## Modo CLI
-![](./resources/capture-gui.png)
+![](./resources/capture-cli.png)
 
 ## Instalación
 
