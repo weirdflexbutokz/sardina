@@ -2,11 +2,9 @@ import questionary
 import subprocess
 import os
 
-# Preguntar por la imagen
 ruta_imagen = questionary.path("¿Cuál es el path de la imagen que deseas flashear?").ask()
 ruta_imagen = os.path.expanduser(ruta_imagen)
 
-# Obtener lista de dispositivos USB conectados
 def obtener_usbs():
     resultado = subprocess.run(
         ["lsblk", "-o", "NAME,MODEL,TRAN,SIZE,MOUNTPOINT", "-J"],
@@ -16,7 +14,6 @@ def obtener_usbs():
     dispositivos = []
     data = json.loads(resultado.stdout)
     for device in data["blockdevices"]:
-        # Filtrar solo dispositivos con 'usb' en TRAN
         if device.get("tran") == "usb":
             nombre = f"/dev/{device['name']} ({device.get('model','')}, {device['size']})"
             dispositivos.append(nombre)
