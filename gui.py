@@ -49,6 +49,11 @@ tk.Button(frame_imagen, text="Examinar", command=seleccionar_imagen).pack(side="
 frame_usb = tk.LabelFrame(root, text="2. Selecciona el dispositivo USB", padx=10, pady=10)
 frame_usb.pack(fill="x", padx=10, pady=5)
 usbs = obtener_usbs()
+if usbs:
+    dispositivo_var.set(usbs[0])
+else:
+    usbs = ["No se detectaron USBs"]
+    dispositivo_var.set(usbs[0])
 tk.OptionMenu(frame_usb, dispositivo_var, *usbs).pack(side="left", padx=5)
 
 # Sección 3: Botón de empezar
