@@ -2,7 +2,7 @@
 
 Sardina es un programa muy simple para flashear imágenes en dispositivos de almacenamiento.
 
-Incluye tanto un programa para CLI como gráfico con tkinter.
+![](./resources/capture-gui.png)
 
 ## Instalación
 
