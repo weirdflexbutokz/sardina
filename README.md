@@ -1,7 +1,11 @@
-# sardina
+# Sardina
 
-Sardina es un programa muy simple para flashear imágenes en dispositivos de almacenamiento.
+Sardina es un programa simple para flashear imágenes en dispositivos de almacenamiento desde la terminal o con interfaz.
 
+## Modo GUI
+![](./resources/capture-gui.png)
+
+## Modo CLI
 ![](./resources/capture-gui.png)
 
 ## Instalación
