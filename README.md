@@ -12,7 +12,7 @@ Sardina es un programa simple para flashear imágenes en dispositivos de almacen
 
 Para usar el modo *CLI* necesitarás `questionary` como dependencia de Python, puedes lanzarlo con un entorno `venv` gestionado con python/pip, mediante `uv` o usando la shell `nix` preparada en el proyecto.
 
-Para el modo *GUI* necistarás `tkinter`, puedes instalarlo en sistemas debian/ubuntu mediante `sudo apt install python3-tk`
+Para el modo *GUI* necesitarás `tkinter`, puedes instalarlo en sistemas debian/ubuntu mediante `sudo apt install python3-tk`
 
 ### Debian/Ubuntu:
 
