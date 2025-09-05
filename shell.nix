@@ -4,7 +4,6 @@
 pkgs.mkShell {
   buildInputs = [
     pkgs.python312
-    pkgs.mkdocs
     pkgs.python312Packages.pip
     pkgs.python312Packages.questionary
     pkgs.python312Packages.tkinter
