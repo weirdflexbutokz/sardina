@@ -34,19 +34,20 @@ def flashear():
     subprocess.run(comando)
 
 root = tk.Tk()
-root.title("Flasheador simple")
+root.title("Sardina")
+root.configure(bg="#222222")
 
 imagen_var = tk.StringVar()
 dispositivo_var = tk.StringVar()
 
 # Sección 1: Selección de imagen
-frame_imagen = tk.LabelFrame(root, text="1. Selecciona la imagen", padx=10, pady=10)
+frame_imagen = tk.LabelFrame(root, text="1. Selecciona la imagen", padx=10, pady=10, bg="#222222", fg="#eeeeee")
 frame_imagen.pack(fill="x", padx=10, pady=5)
-tk.Entry(frame_imagen, textvariable=imagen_var, width=50).pack(side="left", padx=5)
-tk.Button(frame_imagen, text="Examinar", command=seleccionar_imagen).pack(side="left", padx=5)
+tk.Entry(frame_imagen, textvariable=imagen_var, width=50, bg="#333333", fg="#eeeeee", insertbackground="#eeeeee").pack(side="left", padx=5)
+tk.Button(frame_imagen, text="📁", command=seleccionar_imagen, bg="#444444", fg="#eeeeee", activebackground="#555555").pack(side="left", padx=5)
 
 # Sección 2: Selección de USB
-frame_usb = tk.LabelFrame(root, text="2. Selecciona el dispositivo USB", padx=10, pady=10)
+frame_usb = tk.LabelFrame(root, text="2. Selecciona el dispositivo USB", padx=10, pady=10, bg="#222222", fg="#eeeeee")
 frame_usb.pack(fill="x", padx=10, pady=5)
 usbs = obtener_usbs()
 if usbs:
@@ -57,11 +58,11 @@ else:
 tk.OptionMenu(frame_usb, dispositivo_var, *usbs).pack(side="left", padx=5)
 
 # Sección 3: Botón de empezar
-frame_empezar = tk.LabelFrame(root, text="3. Flashear imagen", padx=10, pady=10)
+frame_empezar = tk.LabelFrame(root, text="3. Flashear imagen", padx=10, pady=10, bg="#222222", fg="#eeeeee")
 frame_empezar.pack(fill="x", padx=10, pady=5)
-tk.Button(frame_empezar, text="Empezar", command=flashear, height=2, width=20).pack(pady=5)
+tk.Button(frame_empezar, text="Empezar", command=flashear, height=2, width=20, bg="#444444", fg="#eeeeee", activebackground="#555555").pack(pady=5)
 
-tk.Button(root, text="Salir", command=root.quit).pack(pady=5)
+tk.Button(root, text="Salir", command=root.quit, bg="#444444", fg="#eeeeee", activebackground="#555555").pack(pady=5)
 
 root.geometry("500x250")
 root.mainloop()
