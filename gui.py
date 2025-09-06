@@ -2,13 +2,13 @@ import tkinter as tk
 from tkinter import filedialog, messagebox
 import subprocess
 import os
+import json
 
 def obtener_usbs():
     resultado = subprocess.run(
         ["lsblk", "-o", "NAME,MODEL,TRAN,SIZE,MOUNTPOINT", "-J"],
         capture_output=True, text=True
     )
-    import json
     dispositivos = []
     data = json.loads(resultado.stdout)
     for device in data["blockdevices"]:
